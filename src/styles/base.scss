@@ -23,4 +23,15 @@ input[type=button] {
     &:hover {
         cursor: pointer;
     }
- }
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
