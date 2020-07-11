@@ -16,7 +16,13 @@
             <%= require('html-loader!./components/header-menu.html') %>
         </div>
     </div>
-    <div class="main"></div>
+    <div class="main flex flex--jc-center">
+        <div class="container">
+            <%= require('html-loader!./components/product-card.html') %>
+            <%= require('html-loader!./components/description.html') %>
+            <%= require('html-loader!./components/reviews.html') %>
+        </div>
+    </div>
     <div class="footer flex flex--ai-center flex--column">
         <div class="container">
             <%= require('html-loader!./components/footer-menu.html') %>
@@ -24,8 +30,5 @@
         </div>
         <%= require('html-loader!./components/footer.html') %>
     </div>
-    <%= require('html-loader!./components/product-card.html') %>
-    <%= require('html-loader!./components/description.html') %>
-    <%= require('html-loader!./components/reviews.html') %>
 </body>
 </html>
