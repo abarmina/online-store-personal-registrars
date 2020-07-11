@@ -1,0 +1,16 @@
+{
+  "name": "online-store-personal-registrars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abarmina/online-store-personal-registrars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
