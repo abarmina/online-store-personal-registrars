@@ -2,8 +2,11 @@
 @import "./container.scss";
 @import "./info.scss";
 @import "./menu.scss";
-@import "./flex.scss";
-@import "./bottom-border.scss";
+@import "./component-style/flex.scss";
+@import "./component-style/bottom-border.scss";
+@import "./component-style/j-active.scss";
+@import "./component-style/relative.scss";
 @import "./base.scss";
 @import "./button.scss";
-@import "./j-active.scss";
+@import "./main.scss";
+@import "./footer.scss";
