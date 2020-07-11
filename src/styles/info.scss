@@ -9,12 +9,12 @@
     }
 
     &__item {
-        position: relative;
         margin-right: 20px;
     }
 
     &__text {
         margin: 0 5px;
+        line-height: 15px;
         &--bold {
             font-weight: $font-semi-bold;
         }
@@ -24,8 +24,7 @@
         font-size: $font-size-info;
     }
 
-    &__basket{
-        position: relative;
+    &__basket {
         color: $price-color;
     }
 
