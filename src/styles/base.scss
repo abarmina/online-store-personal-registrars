@@ -1,0 +1,26 @@
+html, body {
+    height: 100vh;
+}
+
+body {
+    min-width: 1240px;
+    background-color: $body-bc-color;
+    margin: 0;
+    font-family: $font-family;
+    font-size: $font-size-primary;
+    font-weight: $font-normal;
+    font-style: normal;
+    color: $text-color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+button,
+input[type=button] {
+    &:hover {
+        cursor: pointer;
+    }
+ }

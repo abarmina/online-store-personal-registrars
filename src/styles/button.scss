@@ -1,0 +1,40 @@
+.button {
+    padding: 15px 25px;
+    background-color: $body-bc-color;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: $font-size-btn;
+    font-weight: $font-bold;
+    color: $btn-color-one;
+    line-height: 17px;
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &--primary {
+        background-color: $btn-color-one;
+        color: $btn-color-two;
+    }
+
+    &--secondary  {
+        background-color: $btn-bc-one;
+        color: $btn-color-two;
+    }
+
+    &--tertiary  {
+        background-color: inherit;
+        border: 1px solid $btn-color-one;
+    }
+
+    &--quaternary  {
+        background-color: $btn-bc-one;
+        color: $btn-color-two;
+    }
+
+    &:hover {
+        box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    }
+}
