@@ -1,3 +1,7 @@
+.j-active {
+    display: block !important;
+}
+
 .j-active + .menu__nav--dropdown {
     display: block;
 }
