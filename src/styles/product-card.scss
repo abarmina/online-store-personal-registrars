@@ -102,4 +102,13 @@
     &__price {
         margin-right: 10px;
     }
+
+    &__button {
+        width: 287px;
+        min-height: 60px;
+        padding: 0;
+        &:last-child {
+            margin-left: 30px;
+        }
+    }
 }
