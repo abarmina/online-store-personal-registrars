@@ -1,14 +1,39 @@
 <div class="flex flex--jc-center mt-2">
-    <div class="reviews relative">
+    <div class="reviews">
         <div class="reviews__comment relative">
             <div class="reviews__content reviews__content--first">01.12.2019, 04:50</div>
             <h4 class="reviews__title">Инна Иванова</h4>
             <p class="reviews__text">Можно ли установить глушилку сотовой связи в автомобиль?</p>
         </div>
         <div class="reviews__comment reviews__comment--separator relative mt-2">
-            <div class="reviews__content reviews__content--first">01.12.2019, 04:50</div>
+            <div class="reviews__content reviews__content--second">01.12.2019, 04:50</div>
             <h4 class="reviews__title">Василий Пупкин</h4>
             <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit tincidunt odio et sapien, sem. Volutpat elementum pharetra aenean porta sit. Sagittis, est, ultrices placerat tristique velit semper aliquet dictum.</p>
+        </div>
+        <div class="flex flex--jc-center mt-2">
+            <form action="" class="form flex flex--column flex--ai-center">
+                <h4>Оставить отзыв о товаре</h4>
+                <div class="form__row flex flex--jc-space-between mt-1">
+                    <div class="relative">
+                        <label class="form__label form__label--profile">* Ваше имя
+                            <input class="form__field flex flex--column" type="text" placeholder="Введите имя" required maxlength="20" required>
+                        </label>
+                    </div>
+                    <div class="relative">
+                        <label class="form__label form__label--phone">* Ваш телефон
+                            <input class="form__field flex flex--column" type="number" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" maxlength="11" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-1">
+                    <label class="form__label">* Ваш отзыв
+                        <textarea class="form__field form__field--textarea" placeholder="Оставьте ваш отзыв"></textarea>
+                    </label>
+                </div>
+                <div class="mt-1">
+                    <input class="button button--primary form__button" type="submit" value="Отправить" class="">
+                </div>
+            </form>
         </div>
     </div>
 </div>

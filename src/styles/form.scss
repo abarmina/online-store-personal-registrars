@@ -1,0 +1,53 @@
+.form {
+    width: 815px;
+
+    &__row {
+        width: 100%;
+    }
+
+    &__field {
+        width: 390px;
+        padding: 9px 0 9px 50px;
+        opacity: 0.5;
+        border: 0.5px solid #B9B9B9;
+        border-radius: 10px;
+        background-color: $body-bc-color;
+        box-shadow: 10px 20px 45px rgba(0, 0, 0, 0.05);
+        font-size: 16px;
+        line-height: 24px;
+
+        &--textarea {
+            width: 815px;
+            min-height: 90px;
+            padding-left: 25px;
+        }
+    }
+
+    &__label {
+        margin-left: 25px;
+        line-height: 16px;
+
+        &--profile,
+        &--phone {
+            &::before {
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                content: url(/images/icon-form-profile.svg);
+                top: 30px;
+                left: 25px;
+            }
+        }
+
+        &--phone {
+            &::before {
+                content: url(/images/icon-form-phone.svg);
+            }
+        }
+    }
+
+    &__button {
+        width: 280px;
+        padding: 20px 20px;
+    }
+}

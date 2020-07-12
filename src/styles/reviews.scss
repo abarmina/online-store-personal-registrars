@@ -1,6 +1,7 @@
 .reviews {
     &__comment {
-        max-width: 770px;
+        width: 770px;
+
         &--separator {
             &::before {
                 position: absolute;
@@ -8,7 +9,7 @@
                 height: 0.5px;
                 content: "";
                 top: -40px;
-                left: -235px;
+                left: -215px;
                 background-color: #B9B9B9;
                 border-radius: 10px;
                 transform: matrix(1, 0, 0, -1, 0, 0);
@@ -19,7 +20,8 @@
     &__content {
         line-height: 16px;
 
-        &--first {
+        &--first,
+        &--second {
             &::before {
                 position: absolute;
                 width: 50px;
