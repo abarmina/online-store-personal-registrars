@@ -1,3 +1,7 @@
-.j-active {
+.j-active + .menu__nav--dropdown {
     display: block;
+}
+
+.j-active > .menu__icon {
+    transform: rotate(180deg);
 }
