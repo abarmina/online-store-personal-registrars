@@ -1,7 +1,7 @@
-let decreaseButton = document.getElementById('j-minus'),
+const decreaseButton = document.getElementById('j-minus'),
       increaseButton = document.getElementById('j-plus'),
-      counter = document.getElementById('j-counter'),
-      counterNumber = Number(counter.textContent);
+      counter = document.getElementById('j-counter');
+let counterNumber = Number(counter.textContent);
 
 decreaseButton.addEventListener('click', () => {
     if (counterNumber > 0) counterNumber--;
