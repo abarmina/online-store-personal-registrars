@@ -1,4 +1,5 @@
 .footer {
+    width: 100%;
     line-height: 15px;
 
     &__menu {
@@ -18,7 +19,7 @@
     }
 
     &__top {
-        width: 100vw;
+        width: 100%;
         background-color: $footer-bc-top;
     }
 
@@ -45,7 +46,7 @@
     }
 
     &__bottom {
-        width: 100vw;
+        width: 100%;
         background-color: $footer-bc-bottom;
     }
 
