@@ -1,0 +1,25 @@
+.nav {
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    background-color: $body-bc-color;
+
+    &__list {
+        display: inline;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+        font-size: $font-size-btn;
+        font-weight: $font-bold;
+        color: $header-color;
+        line-height: 17px;
+        padding: 20px 0;
+        &--active {
+            border-radius: 10px;
+            background-color: $btn-color-one;
+            color: $btn-color-two;
+        }
+    }
+}

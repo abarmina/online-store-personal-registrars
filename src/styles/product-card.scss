@@ -111,4 +111,31 @@
             margin-left: 30px;
         }
     }
+
+    &__info {
+        width: 165px;
+    }
+
+    &__icon {
+        width: 61px;
+        height: 61px;
+        background-color: $body-bc-color;
+        border-radius: 50%;
+        box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    &__item {
+        line-height: 16px;
+    }
+
+    &__list {
+        margin-left: 15px;
+        margin-top: -3px;
+        list-style-type: disc;
+        color: #162345;
+        line-height: 22px;
+        &--color {
+            color: $text-color;
+        }
+    }
 }
