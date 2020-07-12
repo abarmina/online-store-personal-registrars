@@ -1,5 +1,6 @@
 html, body {
     height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
@@ -18,10 +19,19 @@ body {
 }
 
 h3 {
+    margin: 0;
     font-weight: $font-semi-bold;
     font-size: 32px;
     line-height: 39px;
-    color: #131313;
+    color: $header-color;
+}
+
+h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: $font-normal;
+    color: $header-color;
+    line-height: 26px;
 }
 
 a,
