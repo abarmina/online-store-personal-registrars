@@ -11,8 +11,13 @@
         color: $text-color-secondary;
     }
 
-    &__image {
-        width: 548px;
+    &__block {
+        margin-top: 35px;
+        margin-bottom: 90px;
+    }
+
+    &__slider {
+        min-width: 548px;
         height: 548px;
         border-radius: 10px;
         box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.05);
@@ -52,5 +57,49 @@
             border-radius: 50%;
             box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.05), 0px 0px 14px rgba(0, 0, 0, 0.05);
         }
+    }
+
+    &__number {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: $text-color-secondary;
+        font-size: 42px;
+        &--all {
+            font-size: 20px;
+        }
+    }
+
+    &__about {
+        max-width: 600px;
+    }
+
+    &__amount {
+        font-size: $font-size-btn;
+        font-weight: $font-bold;
+        color: $price-color;
+        margin-right: 25px;
+    }
+
+    &__counter {
+        min-width: 35px;
+        min-height: 40px;
+        border: 1px solid $btn-color-one;
+
+        &--minus,
+        &--plus {
+            padding: 0;
+            background-color: $btn-color-one;
+            border-radius: 10px 0 0 10px;
+            color: $btn-color-two;
+        }
+
+        &--plus {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    &__price {
+        margin-right: 10px;
     }
 }
