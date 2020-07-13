@@ -48,7 +48,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'homepage.html',
-            template: 'src/index.html'
+            template: 'src/homepage.html'
         }),
 
         new CopyPlugin({
