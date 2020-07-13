@@ -9,5 +9,5 @@ decreaseButton.addEventListener('click', () => {
 });
 
 increaseButton.addEventListener('click', () => {
-    counter.textContent = counterNumber++;
+    counter.textContent = ++counterNumber;
 });
