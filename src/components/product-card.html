@@ -1,5 +1,72 @@
 <div class="product-card">
-    <div class="container">
-        <div class="product-card__history"></div>
+    <ul class="flex flex--jc-start flex--ai-center">
+        <li><object type="image/svg+xml" data="/images/icon-home.svg" width="16" height="16"></object></li>
+        <li class="product-card__history"><a class="product-card__link" href="#">Название товара “Самая лучшая камера”</a></li>
+    </ul>
+    <div class="flex flex--jc-space-between flex--ai-center mt-1 mb-1">
+        <div class="product-card__slider relative flex flex--jc-center flex--ai-center">
+            <object type="image/svg+xml" data="/images/best-camera.jpg" width="276" height="449"></object>
+            <button class="button product-card__switch product-card__switch--next"><object type="image/svg+xml" data="/images/icon-arrow-right.svg" width="9" height="14"></object></button>
+            <button class="button product-card__switch product-card__switch--back"><object type="image/svg+xml" data="/images/icon-arrow-left.svg" width="9" height="14"></object></button>
+            <div class="product-card__number">01<span class="product-card__number--all"> /05</span></div>
+        </div>
+        <div class="product-card__about">
+            <h3>Название товара “Самая лучшая камера”</h3>
+            <div class="flex flex--ai-center mt-2">
+                <div class="product-card__amount flex flex--ai-center">
+                    <button class="button product-card__counter product-card__counter--minus flex flex--jc-center flex--ai-center" id="j-minus">-</button>
+                    <div class="product-card__counter flex flex--jc-center flex--ai-center" id="j-counter">1</div>
+                    <button class=" button product-card__counter product-card__counter--plus flex flex--jc-center flex--ai-center" id="j-plus">+</button>
+                </div>
+                <div class="price"><span class="price--old product-card__price">15050 &#8381</span><span class="price--new">4970 &#8381</span></div>
+            </div>
+            <div class="flex flex--ai-center mt-3">
+                <button class="button button--primary product-card__button flex flex--jc-center flex--ai-center">
+                    <object class="button__icon" type="image/svg+xml" data="/images/icon-basket-white.svg" width="23" height="21"></object>
+                    В корзину
+                </button>
+                <button class="button button--tertiary product-card__button">Купить в 1 клик</button>
+            </div>
+            <div class="flex flex--jc-space-between mt-1">
+                <div class="product-card__info">
+                    <div class="product-card__icon flex flex--jc-center flex--ai-center">
+                        <object type="image/svg+xml" data="/images/icon-geolocation-blue.svg" width="17" height="23"></object>
+                    </div>
+                    <h5 class="mt-4">В наличии:</h5>
+                    <div class="product-card__item mt-5">г. Петропавловск- Камчасткий: ул. Ленина 12</div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__icon flex flex--jc-center flex--ai-center">
+                        <object type="image/svg+xml" data="/images/icon-payment-blue.svg" width="17" height="23"></object>
+                    </div>
+                    <h5 class="mt-4">Способы оплаты:</h5>
+                    <div class="product-card__item mt-5">
+                        <ul class="product-card__list">
+                            <li><span class="product-card__list--color">Оплата при получении</span></li>
+                            <li><span class="product-card__list--color">Безналичный расчет</span></li>
+                            <li><span class="product-card__list--color">По счету для юр. лиц</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__icon flex flex--jc-center flex--ai-center">
+                        <object type="image/svg+xml" data="/images/icon-share-blue.svg" width="17" height="23"></object>
+                    </div>
+                    <h5 class="mt-4">Поделиться:</h5>
+                    <div class="flex mt-5">
+                        <a href="#"><object class="button__icon" type="image/svg+xml" data="/images/icon-vk.svg" width="23" height="23"></object></a>
+                        <a href="#"><object class="button__icon" type="image/svg+xml" data="/images/icon-fb.svg" width="23" height="23"></object></a>
+                        <a href="#"><object class="button__icon" type="image/svg+xml" data="/images/icon-twitter.svg" width="23" height="23"></object></a>
+                        <a href="#"><object class="button__icon" type="image/svg+xml" data="/images/icon-ok.svg" width="23" height="23"></object></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <ul class="nav flex">
+        <li class="nav__list"><a href="#" class="nav__link nav__link--j-active tab" id="tab1">Описание</a></li>
+        <li class="nav__list"><a href="#" class="nav__link">Характеристики</a></li>
+        <li class="nav__list"><a href="#" class="nav__link tab" id="tab2">Отзывы</a></li>
+        <li class="nav__list"><a href="#" class="nav__link">Вопрос-ответ</a></li>
+    </ul>
 </div>

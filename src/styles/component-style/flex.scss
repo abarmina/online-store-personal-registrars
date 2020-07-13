@@ -9,6 +9,10 @@
         justify-content: space-between;
     }
 
+    &--jc-start {
+        justify-content: flex-start;
+    }
+
     &--ai-center {
         align-items: center;
     }
