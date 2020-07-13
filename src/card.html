@@ -17,10 +17,20 @@
         </div>
     </div>
     <div class="main flex flex--jc-center">
-        <div class="container mt-1 mb-2" id="accordion">
+        <div class="container mt-1 mb-2">
             <%= require('html-loader!./components/product-card.html') %>
-            <%= require('html-loader!./components/description.html') %>
-            <%= require('html-loader!./components/reviews.html') %>
+            <div id="accordion">
+                <ul class="nav flex">
+                    <li class="nav__list"><a href="#" class="nav__link j-active tab" id="tab-1">Описание</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link">Характеристики</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link tab" id="tab-2">Отзывы</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link">Вопрос-ответ</a></li>
+                </ul>
+                <ul>
+                    <li class="page j-active" id="page-1"><%= require('html-loader!./components/description.html') %></li>
+                    <li class="page" id="page-2"><%= require('html-loader!./components/reviews.html') %></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer flex flex--ai-center flex--column">

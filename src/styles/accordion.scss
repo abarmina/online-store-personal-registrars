@@ -1,0 +1,7 @@
+.page {
+    display: none;
+    &.j-active {
+        display: block;
+    }
+}
+
