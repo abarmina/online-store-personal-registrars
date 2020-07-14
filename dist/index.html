@@ -69,7 +69,7 @@
     <nav>
         <ul class="menu__nav flex flex--jc-space-between flex--ai-center">
             <li class="menu__page"><a class="menu__link" href="#">Главная</a></li>
-            <li class="menu__page"><a class="menu__link" href="#">Каталог</a></li>
+            <li class="menu__page"><a class="menu__link" href="index.html">Каталог</a></li>
             <li class="menu__page"><a class="menu__link" href="#">Доставка и оплата</a></li>
             <li class="menu__page menu__page--active flex">
                 <a class="menu__link flex flex--ai-center" id="dropdown2" href="#">Полезная информации
@@ -111,7 +111,7 @@
                     <div class="product-card__counter flex flex--jc-center flex--ai-center" id="j-counter">1</div>
                     <button class=" button product-card__counter product-card__counter--plus flex flex--jc-center flex--ai-center" id="j-plus">+</button>
                 </div>
-                <div class="price"><span class="price--old product-card__price">15050 &#8381</span><span class="price--new">4970 &#8381</span></div>
+                <div class="price"><span class="price--old product-card__price"><span id="old-price">15050</span> &#8381</span><span class="price--new"><span id="new-price">4970</span> &#8381</span></div>
             </div>
             <div class="flex flex--ai-center mt-3">
                 <button class="button button--primary product-card__button flex flex--jc-center flex--ai-center">
@@ -156,23 +156,25 @@
             </div>
         </div>
     </div>
-    <ul class="nav flex">
-        <li class="nav__list"><a href="" class="nav__link nav__link--active">Описание</a></li>
-        <li class="nav__list"><a href="" class="nav__link">Характеристики</a></li>
-        <li class="nav__list"><a href="" class="nav__link">Отзывы</a></li>
-        <li class="nav__list"><a href="" class="nav__link">Вопрос-ответ</a></li>
-    </ul>
 </div>
 
-            <div class="flex flex--jc-center mt-2">
-    <div class="description">
+            <div id="accordion">
+                <ul class="nav flex">
+                    <li class="nav__list"><a href="#" class="nav__link j-active tab" id="tab-1">Описание</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link">Характеристики</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link tab" id="tab-2">Отзывы</a></li>
+                    <li class="nav__list"><a href="#" class="nav__link">Вопрос-ответ</a></li>
+                </ul>
+                <ul>
+                    <li class="page j-active" id="page-1"><div class="flex flex--jc-center">
+    <div class="description mt-2">
         <h4>Описания для самой лучшей камеры</h4>
         <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor nulla tortor volutpat, venenatis, neque pulvinar nunc leo bibendum. Eu feugiat vulputate id libero velit purus tortor. Montes, nullam elementum ullamcorper volutpat eros, aenean vitae nisi feugiat. Amet, pellentesque quis ultrices nisl et vehicula mi. Duis consectetur in bibendum amet, dolor luctus. Velit porta elit ut aenean volutpat scelerisque massa aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor nulla tortor volutpat, venenatis, neque pulvinar nunc leo bibendum. Eu feugiat vulputate id libero velit purus tortor. Montes, nullam elementum ullamcorper volutpat eros, aenean vitae nisi feugiat. Amet, pellentesque quis ultrices nisl et vehicula mi. Duis consectetur in bibendum amet, dolor luctus. Velit porta elit ut aenean volutpat scelerisque massa aliquam.</p>
     </div>
 </div>
-
-            <div class="flex flex--jc-center mt-2">
-    <div class="reviews">
+</li>
+                    <li class="page" id="page-2"><div class="flex flex--jc-center">
+    <div class="reviews mt-2">
         <div class="reviews__comment relative">
             <div class="reviews__content reviews__content--first">01.12.2019, 04:50</div>
             <h4 class="reviews__title">Инна Иванова</h4>
@@ -183,33 +185,36 @@
             <h4 class="reviews__title">Василий Пупкин</h4>
             <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit tincidunt odio et sapien, sem. Volutpat elementum pharetra aenean porta sit. Sagittis, est, ultrices placerat tristique velit semper aliquet dictum.</p>
         </div>
-        <div class="flex flex--jc-center">
+        <div class="flex flex--jc-center mt-2">
             <form action="" class="form flex flex--column flex--ai-center">
-                <div class="form__row flex flex--jc-space-between">
-                    <div>
-                        <label>* Ваше имя
-                            <input class="form__field flex flex--column" type="text"  placeholder="Введите имя" required maxlength="20" required>
+                <h4>Оставить отзыв о товаре</h4>
+                <div class="form__row flex flex--jc-space-between mt-1">
+                    <div class="relative">
+                        <label class="form__label form__label--profile">* Ваше имя
+                            <input class="form__field flex flex--column" type="text" placeholder="Введите имя" required maxlength="20" required>
                         </label>
                     </div>
-                    <div>
-                        <label>* Ваш телефон
+                    <div class="relative">
+                        <label class="form__label form__label--phone">* Ваш телефон
                             <input class="form__field flex flex--column" type="number" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" maxlength="11" required>
                         </label>
                     </div>
                 </div>
-                <div>
-                    <label>* Ваш отзыв
+                <div class="mt-1">
+                    <label class="form__label">* Ваш отзыв
                         <textarea class="form__field form__field--textarea" placeholder="Оставьте ваш отзыв"></textarea>
                     </label>
                 </div>
-                <div class="form__button">
-                    <input type="submit" value="Отправить" class="">
+                <div class="mt-1">
+                    <input class="button button--primary form__button" type="submit" value="Отправить" class="">
                 </div>
             </form>
         </div>
     </div>
 </div>
-
+</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer flex flex--ai-center flex--column">
@@ -218,7 +223,7 @@
     <nav>
         <ul class="menu__nav flex flex--jc-space-between flex--ai-center footer__menu--nav">
             <li class="menu__page"><a class="menu__link" href="#">Главная</a></li>
-            <li class="menu__page"><a class="menu__link" href="#">Каталог</a></li>
+            <li class="menu__page"><a class="menu__link" href="index.html">Каталог</a></li>
             <li class="menu__page"><a class="menu__link" href="#">Доставка и оплата</a></li>
             <li class="menu__page menu__page--active flex">
                 <a class="menu__link flex flex--ai-center" id="dropdown1" href="#">Полезная информации
@@ -318,5 +323,6 @@
 
 
     </div>
+    <script type="text/javascript" src="bindle.js"></script>
 <script src="bundle.js"></script></body>
 </html>

@@ -94,7 +94,18 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/dropdown.js */ \"./src/js/dropdown.js\");\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_dropdown_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_counter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/counter.js */ \"./src/js/counter.js\");\n/* harmony import */ var _js_counter_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_counter_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/accordion.js */ \"./src/js/accordion.js\");\n/* harmony import */ var _js_accordion_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_accordion_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_counter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/counter.js */ \"./src/js/counter.js\");\n/* harmony import */ var _js_counter_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_counter_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/dropdown.js */ \"./src/js/dropdown.js\");\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_dropdown_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/accordion.js":
+/*!*****************************!*\
+  !*** ./src/js/accordion.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.getElementById('accordion').addEventListener('click', (e)=> {\r\n    if (!e.target.classList.contains('tab')) return;\r\n    \r\n    document.querySelector('.page.j-active').classList.remove('j-active');\r\n    document.querySelector('.tab.j-active').classList.remove('j-active');\r\n\r\n    const id = (e.target.id.split('-'))[1];\r\n    document.getElementById(`page-${id}`).classList.add('j-active')\r\n    document.getElementById(`tab-${id}`).classList.add('j-active')\r\n})\r\n\n\n//# sourceURL=webpack:///./src/js/accordion.js?");
 
 /***/ }),
 
@@ -105,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("let decreaseButton = document.getElementById('j-minus'),\r\n      increaseButton = document.getElementById('j-plus'),\r\n      counter = document.getElementById('j-counter'),\r\n      counterNumber = Number(counter.textContent);\r\n\r\ndecreaseButton.addEventListener('click', () => {\r\n    if (counterNumber > 0) counterNumber--;\r\n    counter.textContent = counterNumber;\r\n});\r\n\r\nincreaseButton.addEventListener('click', () => {\r\n    counter.textContent = counterNumber++;\r\n});\r\n\n\n//# sourceURL=webpack:///./src/js/counter.js?");
+eval("const oldPrice = document.getElementById('old-price'),\r\n      newPrice = document.getElementById('new-price'),\r\n      counter = document.getElementById('j-counter');\r\nlet counterNumber = Number(counter.textContent),\r\n    oldPriceNumber = Number(oldPrice.textContent),\r\n    newPriceNumber = Number(newPrice.textContent);\r\n\r\ncounter.addEventListener('counterOnChange', (e) => {\r\n    oldPrice.textContent = oldPriceNumber * e.detail;\r\n    newPrice.textContent = newPriceNumber * e.detail;\r\n});\r\n\r\ndocument.getElementById('j-minus').addEventListener('click', () => {\r\n    if (counterNumber < 2) return;\r\n\r\n    counter.textContent = --counterNumber;\r\n    counter.dispatchEvent(new CustomEvent('counterOnChange', {detail: counterNumber}));\r\n});\r\n\r\ndocument.getElementById('j-plus').addEventListener('click', () => {\r\n    counter.textContent = ++counterNumber;\r\n    counter.dispatchEvent(new CustomEvent('counterOnChange', {detail: counterNumber}));\r\n});\r\n\r\n// decreaseButton.addEventListener('click', () => {\r\n//     if (counterNumber < 2) return;\r\n\r\n//     counter.textContent = --counterNumber;\r\n//     oldPrice.textContent = (oldPriceNumber -= startOldPrice);\r\n//     newPrice.textContent = (newPriceNumber -= startNewPrice);\r\n// });\r\n\r\n// increaseButton.addEventListener('click', () => {\r\n//     counter.textContent = ++counterNumber;\r\n//     oldPrice.textContent = (oldPriceNumber += startOldPrice);\r\n//     newPrice.textContent = (newPriceNumber += startNewPrice);\r\n// });\r\n\r\n// counter.addEventListener('counterIncrease', (e) => {\r\n//     console.log(e.detail.number)\r\n// });\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/counter.js?");
 
 /***/ }),
 
@@ -116,7 +127,7 @@ eval("let decreaseButton = document.getElementById('j-minus'),\r\n      increase
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const dropdown1 = document.getElementById('dropdown1');\r\nconst dropdown2 = document.getElementById('dropdown2');\r\n\r\ndocument.addEventListener('click', (e) => {\r\n    if (['dropdown1', 'dropdown2'].includes(e.target.id)) {\r\n        e.target.classList.toggle('j-active');\r\n        return;\r\n    }\r\n    dropdown1.classList.remove('j-active');\r\n    dropdown2.classList.remove('j-active');\r\n})\r\n\n\n//# sourceURL=webpack:///./src/js/dropdown.js?");
+eval("const dropdown1 = document.getElementById('dropdown1'),\r\n      dropdown2 = document.getElementById('dropdown2');\r\n\r\ndocument.addEventListener('click', (e) => {\r\n    if (['dropdown1', 'dropdown2'].includes(e.target.id)) {\r\n        e.target.classList.toggle('j-active');\r\n        return;\r\n    }\r\n    dropdown1.classList.remove('j-active');\r\n    dropdown2.classList.remove('j-active');\r\n})\r\n\n\n//# sourceURL=webpack:///./src/js/dropdown.js?");
 
 /***/ }),
 
