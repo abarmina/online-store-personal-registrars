@@ -63,6 +63,7 @@
         left: 20px;
         color: $text-color-secondary;
         font-size: 42px;
+
         &--all {
             font-size: 20px;
         }
@@ -105,6 +106,7 @@
         width: 287px;
         min-height: 60px;
         padding: 0;
+
         &:last-child {
             margin-left: 30px;
         }
@@ -132,6 +134,7 @@
         list-style-type: disc;
         color: #162345;
         line-height: 22px;
+        
         &--color {
             color: $text-color;
         }

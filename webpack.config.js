@@ -44,11 +44,7 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/card.html',
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'homepage.html',
-            template: 'src/homepage.html'
+            template: 'src/index.html',
         }),
 
         new CopyPlugin({
